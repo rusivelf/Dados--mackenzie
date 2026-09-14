@@ -36,9 +36,9 @@ Dados--mackenzie/
 ## Fonte de dados
 
 - **Origem:** Microdados do Censo da Educação Superior 2024 — Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep), Portal de Dados Abertos.
-- **Arquivo:** `MICRODADOS_CADASTRO_CURSOS_2024` (CSV, delimitado por `;`).
-- **Recorte:** registros da Universidade Paulista (UNIP) na área de Computação e Tecnologias da Informação e Comunicação (TIC), segundo a classificação CINE Brasil.
-- O dicionário de variáveis selecionadas está em [`data/dicionario_dados.md`](data/dicionario_dados.md).
+- **Arquivo:** `MICRODADOS_CADASTRO_CURSOS_2024` (CSV, delimitado por `;`, 720.349 registros, 223 colunas, todas as IES do Brasil).
+- **Recorte aplicado:** `CO_IES` = 322 (Universidade Paulista) + área de Computação e Tecnologias da Informação e Comunicação (TIC), segundo a classificação CINE Brasil → **1.651 registros** (76 presencial + 1.575 EAD), 7 cursos distintos, em 491 municípios e nas 27 unidades federativas do país.
+- Os arquivos filtrados (`unip_tic_completo.csv` e `unip_tic_variaveis_selecionadas.csv`) e o dicionário de variáveis estão em [`data/`](data/dicionario_dados.md).
 
 ## Andamento do projeto
 
