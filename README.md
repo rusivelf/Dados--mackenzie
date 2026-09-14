@@ -28,7 +28,7 @@ Analisar e comparar os cursos de graduação da área de Computação e Tecnolog
 ```
 Dados--mackenzie/
 ├── README.md
-├── docs/     -> documentos entregáveis de cada etapa do projeto (Word/PDF)
+├── Documentos/     -> documentos entregáveis de cada etapa do projeto (Word/PDF)
 ├── data/     -> dicionário de dados / metadados e, futuramente, a base tratada
 └── src/      -> scripts de tratamento e análise de dados (a partir da Etapa 2)
 ```
