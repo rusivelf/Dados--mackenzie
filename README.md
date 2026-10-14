@@ -13,7 +13,6 @@ Analisar e comparar os cursos de graduação da área de Computação e Tecnolog
 - [Estrutura do repositório](#estrutura-do-repositório)
 - [Fonte de dados](#fonte-de-dados)
 - [Andamento do projeto](#andamento-do-projeto)
-- [Análise exploratória (Etapa 2)](#análise-exploratória-etapa-2)
 
 ## Integrantes - Grupo 6
 
@@ -29,9 +28,11 @@ Analisar e comparar os cursos de graduação da área de Computação e Tecnolog
 ```
 Dados--mackenzie/
 ├── README.md
-├── docs/  -> relatórios de cada etapa (Etapa 1 e Etapa 1 + Etapa 2, em Word e PDF)
-├── data/  -> dicionário de dados e bases filtradas (CSV)
-└── src/   -> notebook de análise exploratória em Python (Etapa 2)
+├── docs/          -> documentos entregáveis de cada etapa (Word/PDF), versões mantidas
+│   ├── A1_Projeto_Aplicado_Etapa1.docx/.pdf   -> entrega da Etapa 1
+│   └── A2_Projeto_Aplicado_Etapa1_e_Etapa2.docx/.pdf -> entrega da Etapa 2 (Etapa 1 + Etapa 2)
+├── data/          -> dicionário de dados / metadados e a base filtrada (UNIP + TIC)
+└── src/           -> notebook Jupyter da Análise Exploratória de Dados (Python)
 ```
 
 ## Fonte de dados
@@ -40,18 +41,11 @@ Dados--mackenzie/
 - **Arquivo:** `MICRODADOS_CADASTRO_CURSOS_2024` (CSV, delimitado por `;`, 720.349 registros, 223 colunas, todas as IES do Brasil).
 - **Recorte aplicado:** `CO_IES` = 322 (Universidade Paulista) + área de Computação e Tecnologias da Informação e Comunicação (TIC), segundo a classificação CINE Brasil → **1.651 registros** (76 presencial + 1.575 EAD), 7 cursos distintos, em 490 municípios e nas 27 unidades federativas do país.
 - Os arquivos filtrados (`unip_tic_completo.csv` e `unip_tic_variaveis_selecionadas.csv`) e o dicionário de variáveis estão em [`data/`](data/dicionario_dados.md).
-
-## Análise exploratória (Etapa 2)
-
-O notebook [`src/analise_exploratoria_unip_tic.ipynb`](src/analise_exploratoria_unip_tic.ipynb) realiza a análise exploratória do recorte UNIP + Computação/TIC, usando pandas, numpy, matplotlib e seaborn: dimensão e tipos de dados, valores ausentes, estatística descritiva (média, mediana, moda, variância, desvio, amplitude, coeficiente de variação, quartis, decis e percentis), distribuições, correlação de Spearman e outliers pelo método IQR.
-
-**Como executar:** instale `pandas`, `numpy`, `matplotlib`, `seaborn` e `jupyter`, abra o notebook a partir da pasta `src/` e execute todas as células. A base lida é `data/unip_tic_variaveis_selecionadas.csv`.
-
-**Relatório:** [`docs/A1_Projeto_Aplicado_Etapa1_e_Etapa2.pdf`](docs/A1_Projeto_Aplicado_Etapa1_e_Etapa2.pdf). A versão da Etapa 1 continua em `docs/`.
+- A Análise Exploratória de Dados completa (medidas estatísticas, distribuição, correlações, outliers) está em [`src/analise_exploratoria_unip_tic.ipynb`](src/analise_exploratoria_unip_tic.ipynb).
 
 ## Andamento do projeto
 
 - [x] **Etapa 1** — Metas e milestones (definição de grupo, tema, objetivos, cronograma e identificação da base de dados)
-- [x] **Etapa 2** — Definição do produto (proposta analítica e análise exploratória de dados)
+- [x] **Etapa 2** — Definição do produto (proposta analítica, pipeline de dados e Análise Exploratória de Dados em Python)
 - [ ] **Etapa 3** — Storytelling (apresentação dos resultados analíticos)
 - [ ] **Etapa 4** — Encerramento (ajustes finais e apresentação)
