@@ -33,4 +33,4 @@
 | QT_MAT | Quantidade de matrículas |
 | QT_CONC | Quantidade de concluintes |
 
-18 variáveis selecionadas das 223 originais, relacionadas à identificação dos cursos, modalidade de ensino, localização geográfica e indicadores de oferta e de estudantes. Detalhes da comparação Presencial x EAD estão no relatório das Etapas 1 e 2 (`docs/A2_Projeto_Aplicado_Etapa1_e_Etapa2.pdf`, seções 3.4 e 5.7).
+18 variáveis selecionadas das 223 originais, relacionadas à identificação dos cursos, modalidade de ensino, localização geográfica e indicadores de oferta e de estudantes. Detalhes da comparação Presencial x EAD estão no relatório das Etapas 1 e 2 (`docs/A2_Projeto_Aplicado_Etapa2_EDA.pdf`, seções 3.4 e 5.7).
