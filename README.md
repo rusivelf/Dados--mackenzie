@@ -29,10 +29,14 @@ Analisar e comparar os cursos de graduação da área de Computação e Tecnolog
 Dados--mackenzie/
 ├── README.md
 ├── docs/          -> documentos entregáveis de cada etapa (Word/PDF), versões mantidas
-│   ├── A1_Projeto_Aplicado_Etapa1.docx/.pdf   -> entrega da Etapa 1
-│   └── A2_Projeto_Aplicado_Etapa2_EDA.docx/.pdf       -> entrega da Etapa 2 (Etapa 1 + Etapa 2)
+│   ├── A1_Projeto_Aplicado_Etapa1.docx/.pdf             -> entrega da Etapa 1
+│   ├── A2_Projeto_Aplicado_Etapa2_EDA.docx/.pdf         -> entrega da Etapa 2 (Etapa 1 + Etapa 2)
+│   └── A3_Projeto_Aplicado_Etapa3_Storytelling.docx/.pdf -> entrega da Etapa 3 (Data Storytelling)
 ├── data/          -> dicionário de dados / metadados e a base filtrada (UNIP + TIC)
-└── src/           -> notebook Jupyter da Análise Exploratória de Dados (Python)
+└── src/           -> notebooks Jupyter (Python) e gráficos gerados por eles
+    ├── analise_exploratoria_unip_tic.ipynb   -> análise exploratória (Etapa 2)
+    ├── storytelling_etapa3.ipynb             -> análises de apoio à narrativa (Etapa 3)
+    └── fig_*.png                             -> gráficos usados no relatório da Etapa 3
 ```
 
 ## Fonte de dados
@@ -42,10 +46,17 @@ Dados--mackenzie/
 - **Recorte aplicado:** `CO_IES` = 322 (Universidade Paulista) + área de Computação e Tecnologias da Informação e Comunicação (TIC), segundo a classificação CINE Brasil → **1.651 registros** (76 presencial + 1.575 EAD), 7 cursos distintos, em 490 municípios e nas 27 unidades federativas do país.
 - Os arquivos filtrados (`unip_tic_completo.csv` e `unip_tic_variaveis_selecionadas.csv`) e o dicionário de variáveis estão em [`data/`](data/dicionario_dados.md).
 - A Análise Exploratória de Dados completa (medidas estatísticas, distribuição, correlações, outliers) está em [`src/analise_exploratoria_unip_tic.ipynb`](src/analise_exploratoria_unip_tic.ipynb).
+- As análises de apoio ao Data Storytelling (variância, perfil das 18 variáveis, concentração das matrículas, porte das ofertas, geografia das matrículas e indicadores por modalidade, grau e curso) estão em [`src/storytelling_etapa3.ipynb`](src/storytelling_etapa3.ipynb).
+- Nos notebooks, cada registro é chamado de oferta: um curso de TIC oferecido em um município. Uma oferta não é um polo físico.
+
+### Como executar
+
+1. Instale as bibliotecas: `pip install pandas numpy seaborn matplotlib jupyter`
+2. Abra a pasta `src/` no Jupyter e execute os notebooks de cima para baixo. Eles leem `../data/unip_tic_variaveis_selecionadas.csv` e salvam os gráficos na própria pasta `src/`.
 
 ## Andamento do projeto
 
 - [x] **Etapa 1**: Metas e milestones (definição de grupo, tema, objetivos, cronograma e identificação da base de dados)
 - [x] **Etapa 2**: Definição do produto (proposta analítica, pipeline de dados e Análise Exploratória de Dados em Python)
-- [ ] **Etapa 3**: Storytelling (apresentação dos resultados analíticos)
-- [ ] **Etapa 4**: Encerramento (ajustes finais e apresentação)
+- [x] **Etapa 3**: Data Storytelling (achados, esboço da narrativa e roteiro com falas do vídeo, análise exploratória revisada)
+- [ ] **Etapa 4**: Encerramento (gravação do vídeo final de até 4 minutos)
